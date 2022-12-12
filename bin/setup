@@ -1,0 +1,225 @@
+#!/usr/bin/env sh
+
+# Flag properties 
+
+zsh_enabled=false;
+use_docker_enabled=false;
+use_carthage=false;
+use_cocoapods=false;
+nvm_remote_script_location=https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh;
+
+# Determine if we are using bash or zsh 
+function checkIfZshEnabled() {
+  if [[ -z "${ZSH}" ]]; then 
+    zsh_enabled=true;
+  else
+    zsh_enabled=false;
+  fi
+}
+
+function zshEnabled() {
+  [ "$zsh_enabled" = true ];
+}
+
+# Get any options if the user has specified it
+for arg in "$@"; do 
+  shift 
+  case "$arg" in 
+    "--use-docker") 
+      use_docker_enabled=true;
+      set -- "$@" "-d" ;;
+    "--carthage")
+      use_carthage=true;;
+    "--cocoapods")
+      use_cocoapods=true;;
+  esac
+done
+
+# Checks to see if we have the option --use-docker enabled
+function useDocker() {
+  [ "$use_docker_enabled" = true ];
+}
+
+function useCarthage() {
+  [ "$use_carthage" = true ];
+}
+
+function useCocoapods() {
+  [ "$use_cocoapods" = true ];
+}
+
+# Execute remote script
+function executeRemotely() {
+  curl -s "$1" | bash /dev/stdin
+}
+
+function brewHas() {
+  brew ls --versions "$1" > /dev/null
+}
+
+# Checks to see if the supplied command exists
+function exists() {
+  command -v "$1" > /dev/null 2>&1
+}
+
+# Will install the program specified
+function installProgram() {
+  case $1 in 
+    carthage) 
+      echo '🔶 Installing carthage...';
+      brew tap nsoperations/formulas;
+      brew install nsoperations/formulas/carthage;;
+    cocoapods)
+      echo '🔶 Installing cocoapods...';
+      sudo gem install cocoapods;;
+    nvm) 
+      echo '🔶 Installing nvm...';
+      curl -s "$nvm_remote_script_location" | bash;
+      if zshEnabled; then 
+        source ~/.zshrc;
+      else 
+        source ~/.bash_profile;
+      fi
+      break;;
+    docker) 
+      echo '🔶 Installing docker with docker-compose';
+      brew cask install docker;
+
+      echo '🏃‍♂️ Starting Docker...';
+      open /Applications/Docker.app;;
+    brew)
+      echo '🔶 Installing brew...';
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)";;
+    * )
+      echo "⚠️ Wrong program specified, exiting...";
+      exit 1;;
+  esac
+}
+
+# Prompts the user to install the specified program
+function promptInstall() {
+  while true; do 
+    read -p "Do you wish to install $1? (y/n):" yn
+    case $yn in 
+      [Yy]* )
+       installProgram $1; 
+       break;;
+      [Nn]* ) 
+        echo "Skipping install, could not execute script...";
+        exit;;
+      * ) 
+        echo exit;;
+    esac 
+  done
+}
+
+if ! exists brew; then 
+  printf 'Homebrew not installed.\n'
+  promptInstall brew;
+fi
+
+if useCocoapods; then
+  if ! exists pod; then
+    printf 'Cocoapods not installed.\n'
+    promptInstall pod
+  fi
+elif useCarthage; then
+  if ! exists carthage; then 
+    printf 'Carthage not installed.\n'
+    promptInstall carthage
+  fi
+fi
+
+# If we are not using docker then 
+# check if we have nvm and source it
+# otherwise checking to see if it exists
+# won't work since nvm is a shell function
+if ! useDocker; then 
+
+  # If installed the usual way source that
+  if [[ -f ~/.nvm/nvm.sh ]]; then 
+    source ~/.nvm/nvm.sh
+  
+  # If installed via homebrew source that
+  # We first check if the program is installed from brew
+  elif exists brew; then 
+    if brewHas nvm; then 
+      if [[ -f $(brew --prefix nvm)/nvm.sh ]]; then
+        source $(brew --prefix nvm)/nvm.sh;
+      fi
+    fi
+  fi
+fi
+
+if useDocker; then
+  # Check that we have docker and docker-compose enabled
+  if ! exists docker; then 
+    printf "Docker not installed.\n"
+    promptInstall docker
+  fi
+  if ! exists docker-compose; then 
+    printf "docker-compose not installed.\n"
+    promptInstall docker-compose
+  fi
+else 
+  # Check that we have nvm enabled 
+  if ! exists nvm; then 
+    printf "nvm not installed.\n"
+    promptInstall nvm;
+  fi
+fi
+
+# 1. Install dependency
+if useCocoapods; then
+
+  echo '🔶 Setting up Cocoapods...\n'
+
+  pod install
+
+  echo '✅ Cocoapods Setup Completed\n'
+
+elif useCarthage; then
+
+  echo '🔶 Setting up Carthage...\n'
+
+  carthage update
+
+  echo '✅ Carthage Setup Completed\n'
+
+fi
+
+echo '🔶 Opening workspace...\n'
+
+# 2. Open Workspace
+open Samples.xcworkspace
+
+echo '✅ Workspace Opened\n'
+
+# If we want to use docker then use that
+# else use nvm
+if useDocker; then
+  
+  echo '🔶 Running Docker...\n'
+
+  # 3. Run local docker container
+  cd node_checkout && docker-compose up
+  
+else 
+
+  # Move to checkout directory
+  cd node_checkout;
+
+  # We have an .nvmrc file nvm will use that
+  # with the following commands
+  nvm use;
+
+  # Install the node version specified in .nvmrc
+  nvm install;
+
+  # Install node app dependencies
+  npm install;
+
+  # Run the node app
+  nvm run index.js;
+fi
+

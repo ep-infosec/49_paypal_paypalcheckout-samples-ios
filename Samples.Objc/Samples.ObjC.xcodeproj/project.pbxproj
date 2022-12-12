@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06936DE7260A7F330099E314 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DBB260A7F320099E314 /* main.m */; };
+		06936DE8260A7F330099E314 /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DBE260A7F330099E314 /* AddItemViewController.m */; };
+		06936DE9260A7F330099E314 /* AddItemViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DBF260A7F330099E314 /* AddItemViewController.h */; };
+		06936DEA260A7F330099E314 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DC1260A7F330099E314 /* TextFieldCell.m */; };
+		06936DEB260A7F330099E314 /* QuantityView.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DC2260A7F330099E314 /* QuantityView.h */; };
+		06936DEC260A7F330099E314 /* TextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DC3260A7F330099E314 /* TextFieldCell.h */; };
+		06936DED260A7F330099E314 /* QuantityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DC4260A7F330099E314 /* QuantityView.m */; };
+		06936DEE260A7F330099E314 /* CheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DC6260A7F330099E314 /* CheckoutViewController.m */; };
+		06936DEF260A7F330099E314 /* CheckoutViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DC7260A7F330099E314 /* CheckoutViewController.h */; };
+		06936DF0260A7F330099E314 /* TotalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DC9260A7F330099E314 /* TotalCell.m */; };
+		06936DF1260A7F330099E314 /* ItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DCA260A7F330099E314 /* ItemCell.h */; };
+		06936DF2260A7F330099E314 /* AddItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DCB260A7F330099E314 /* AddItemCell.h */; };
+		06936DF3260A7F330099E314 /* TotalCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DCC260A7F330099E314 /* TotalCell.h */; };
+		06936DF4260A7F330099E314 /* AddItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DCD260A7F330099E314 /* AddItemCell.m */; };
+		06936DF5260A7F330099E314 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DCE260A7F330099E314 /* ItemCell.m */; };
+		06936DF6260A7F330099E314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06936DCF260A7F330099E314 /* Assets.xcassets */; };
+		06936DF7260A7F330099E314 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06936DD0260A7F330099E314 /* Main.storyboard */; };
+		06936DF8260A7F330099E314 /* SceneDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DD1260A7F330099E314 /* SceneDelegate.h */; };
+		06936DF9260A7F330099E314 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06936DD2260A7F330099E314 /* LaunchScreen.storyboard */; };
+		06936DFB260A7F330099E314 /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DD4260A7F330099E314 /* AppDelegate.h */; };
+		06936DFC260A7F330099E314 /* CreateOrderEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DD7260A7F330099E314 /* CreateOrderEndpoint.m */; };
+		06936DFD260A7F330099E314 /* FetchAccessTokenEndpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DD8260A7F330099E314 /* FetchAccessTokenEndpoint.h */; };
+		06936DFE260A7F330099E314 /* CreateOrderEndpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DD9260A7F330099E314 /* CreateOrderEndpoint.h */; };
+		06936DFF260A7F330099E314 /* FetchAccessTokenEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DDA260A7F330099E314 /* FetchAccessTokenEndpoint.m */; };
+		06936E00260A7F330099E314 /* CreateOrderResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DDC260A7F330099E314 /* CreateOrderResponse.m */; };
+		06936E01260A7F330099E314 /* AccessTokenResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DDD260A7F330099E314 /* AccessTokenResponse.h */; };
+		06936E02260A7F330099E314 /* CreateOrderResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DDE260A7F330099E314 /* CreateOrderResponse.h */; };
+		06936E03260A7F330099E314 /* AccessTokenResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DDF260A7F330099E314 /* AccessTokenResponse.m */; };
+		06936E04260A7F330099E314 /* CreateOrderRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DE1260A7F330099E314 /* CreateOrderRequest.m */; };
+		06936E05260A7F330099E314 /* FetchAccessTokenRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DE2260A7F330099E314 /* FetchAccessTokenRequest.h */; };
+		06936E06260A7F330099E314 /* CreateOrderRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 06936DE3260A7F330099E314 /* CreateOrderRequest.h */; };
+		06936E07260A7F330099E314 /* FetchAccessTokenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DE4260A7F330099E314 /* FetchAccessTokenRequest.m */; };
+		06936E08260A7F330099E314 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DE5260A7F330099E314 /* AppDelegate.m */; };
+		06936E09260A7F330099E314 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936DE6260A7F330099E314 /* SceneDelegate.m */; };
+		06D715F426127D0400B611B7 /* PayPalCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06936DB4260A7DC80099E314 /* PayPalCheckout.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		06FFBAA7261E0617003FC893 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FFBAA6261E0617003FC893 /* UIViewController+Extension.m */; };
+		0E1C1503DEB27C593EA7300D /* Pods_Samples_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A98366E2711E6EFD1FF4FF7 /* Pods_Samples_ObjC.framework */; };
+		117AAAC92479FDBA00A63B34 /* PayPalAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 117AAAC82479FDBA00A63B34 /* PayPalAPI.m */; };
+		117AAAF1247A007800A63B34 /* PayPalAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 117AAAC72479FDBA00A63B34 /* PayPalAPI.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06936DB4260A7DC80099E314 /* PayPalCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PayPalCheckout.framework; path = ../Carthage/Build/iOS/PayPalCheckout.framework; sourceTree = "<group>"; };
+		06936DBB260A7F320099E314 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06936DBE260A7F330099E314 /* AddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
+		06936DBF260A7F330099E314 /* AddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
+		06936DC1260A7F330099E314 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
+		06936DC2260A7F330099E314 /* QuantityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuantityView.h; sourceTree = "<group>"; };
+		06936DC3260A7F330099E314 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldCell.h; sourceTree = "<group>"; };
+		06936DC4260A7F330099E314 /* QuantityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuantityView.m; sourceTree = "<group>"; };
+		06936DC6260A7F330099E314 /* CheckoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutViewController.m; sourceTree = "<group>"; };
+		06936DC7260A7F330099E314 /* CheckoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutViewController.h; sourceTree = "<group>"; };
+		06936DC9260A7F330099E314 /* TotalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalCell.m; sourceTree = "<group>"; };
+		06936DCA260A7F330099E314 /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
+		06936DCB260A7F330099E314 /* AddItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemCell.h; sourceTree = "<group>"; };
+		06936DCC260A7F330099E314 /* TotalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalCell.h; sourceTree = "<group>"; };
+		06936DCD260A7F330099E314 /* AddItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemCell.m; sourceTree = "<group>"; };
+		06936DCE260A7F330099E314 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
+		06936DCF260A7F330099E314 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06936DD0260A7F330099E314 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		06936DD1260A7F330099E314 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		06936DD2260A7F330099E314 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06936DD3260A7F330099E314 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06936DD4260A7F330099E314 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		06936DD7260A7F330099E314 /* CreateOrderEndpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateOrderEndpoint.m; sourceTree = "<group>"; };
+		06936DD8260A7F330099E314 /* FetchAccessTokenEndpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchAccessTokenEndpoint.h; sourceTree = "<group>"; };
+		06936DD9260A7F330099E314 /* CreateOrderEndpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateOrderEndpoint.h; sourceTree = "<group>"; };
+		06936DDA260A7F330099E314 /* FetchAccessTokenEndpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchAccessTokenEndpoint.m; sourceTree = "<group>"; };
+		06936DDC260A7F330099E314 /* CreateOrderResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateOrderResponse.m; sourceTree = "<group>"; };
+		06936DDD260A7F330099E314 /* AccessTokenResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessTokenResponse.h; sourceTree = "<group>"; };
+		06936DDE260A7F330099E314 /* CreateOrderResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateOrderResponse.h; sourceTree = "<group>"; };
+		06936DDF260A7F330099E314 /* AccessTokenResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessTokenResponse.m; sourceTree = "<group>"; };
+		06936DE1260A7F330099E314 /* CreateOrderRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateOrderRequest.m; sourceTree = "<group>"; };
+		06936DE2260A7F330099E314 /* FetchAccessTokenRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchAccessTokenRequest.h; sourceTree = "<group>"; };
+		06936DE3260A7F330099E314 /* CreateOrderRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateOrderRequest.h; sourceTree = "<group>"; };
+		06936DE4260A7F330099E314 /* FetchAccessTokenRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchAccessTokenRequest.m; sourceTree = "<group>"; };
+		06936DE5260A7F330099E314 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		06936DE6260A7F330099E314 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		06FFBAA5261E0608003FC893 /* UIViewController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
+		06FFBAA6261E0617003FC893 /* UIViewController+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
+		117AAA7A2479FAE600A63B34 /* Samples.ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Samples.ObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		117AAAC72479FDBA00A63B34 /* PayPalAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayPalAPI.h; sourceTree = "<group>"; };
+		117AAAC82479FDBA00A63B34 /* PayPalAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayPalAPI.m; sourceTree = "<group>"; };
+		7A98366E2711E6EFD1FF4FF7 /* Pods_Samples_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Samples_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C249445652090065B9E20AAE /* Pods-Samples.ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Samples.ObjC.release.xcconfig"; path = "Target Support Files/Pods-Samples.ObjC/Pods-Samples.ObjC.release.xcconfig"; sourceTree = "<group>"; };
+		E0658D1D07E3951457E0265D /* Pods-Samples.ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Samples.ObjC.debug.xcconfig"; path = "Target Support Files/Pods-Samples.ObjC/Pods-Samples.ObjC.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		117AAA772479FAE600A63B34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06D715F426127D0400B611B7 /* PayPalCheckout.framework in Frameworks */,
+				0E1C1503DEB27C593EA7300D /* Pods_Samples_ObjC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06936DB3260A7DC80099E314 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06936DB4260A7DC80099E314 /* PayPalCheckout.framework */,
+				7A98366E2711E6EFD1FF4FF7 /* Pods_Samples_ObjC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		06936DBC260A7F330099E314 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				06936DBD260A7F330099E314 /* AddItemViewController */,
+				06936DC5260A7F330099E314 /* CheckoutViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		06936DBD260A7F330099E314 /* AddItemViewController */ = {
+			isa = PBXGroup;
+			children = (
+				06936DBF260A7F330099E314 /* AddItemViewController.h */,
+				06936DBE260A7F330099E314 /* AddItemViewController.m */,
+				06936DC0260A7F330099E314 /* Views */,
+			);
+			path = AddItemViewController;
+			sourceTree = "<group>";
+		};
+		06936DC0260A7F330099E314 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				06936DC3260A7F330099E314 /* TextFieldCell.h */,
+				06936DC1260A7F330099E314 /* TextFieldCell.m */,
+				06936DC2260A7F330099E314 /* QuantityView.h */,
+				06936DC4260A7F330099E314 /* QuantityView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		06936DC5260A7F330099E314 /* CheckoutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				06936DC7260A7F330099E314 /* CheckoutViewController.h */,
+				06936DC6260A7F330099E314 /* CheckoutViewController.m */,
+				06936DC8260A7F330099E314 /* Views */,
+			);
+			path = CheckoutViewController;
+			sourceTree = "<group>";
+		};
+		06936DC8260A7F330099E314 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				06936DCC260A7F330099E314 /* TotalCell.h */,
+				06936DC9260A7F330099E314 /* TotalCell.m */,
+				06936DCA260A7F330099E314 /* ItemCell.h */,
+				06936DCE260A7F330099E314 /* ItemCell.m */,
+				06936DCB260A7F330099E314 /* AddItemCell.h */,
+				06936DCD260A7F330099E314 /* AddItemCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		06936DD5260A7F330099E314 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				117AAAC72479FDBA00A63B34 /* PayPalAPI.h */,
+				117AAAC82479FDBA00A63B34 /* PayPalAPI.m */,
+				06936DD6260A7F330099E314 /* Endpoints */,
+				06936DDB260A7F330099E314 /* Responses */,
+				06936DE0260A7F330099E314 /* Requests */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		06936DD6260A7F330099E314 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				06936DD8260A7F330099E314 /* FetchAccessTokenEndpoint.h */,
+				06936DDA260A7F330099E314 /* FetchAccessTokenEndpoint.m */,
+				06936DD9260A7F330099E314 /* CreateOrderEndpoint.h */,
+				06936DD7260A7F330099E314 /* CreateOrderEndpoint.m */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		06936DDB260A7F330099E314 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				06936DDD260A7F330099E314 /* AccessTokenResponse.h */,
+				06936DDF260A7F330099E314 /* AccessTokenResponse.m */,
+				06936DDE260A7F330099E314 /* CreateOrderResponse.h */,
+				06936DDC260A7F330099E314 /* CreateOrderResponse.m */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		06936DE0260A7F330099E314 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				06936DE2260A7F330099E314 /* FetchAccessTokenRequest.h */,
+				06936DE4260A7F330099E314 /* FetchAccessTokenRequest.m */,
+				06936DE3260A7F330099E314 /* CreateOrderRequest.h */,
+				06936DE1260A7F330099E314 /* CreateOrderRequest.m */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		06FFBAA4261E058F003FC893 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				06FFBAA5261E0608003FC893 /* UIViewController+Extension.h */,
+				06FFBAA6261E0617003FC893 /* UIViewController+Extension.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		117AAA712479FAE600A63B34 = {
+			isa = PBXGroup;
+			children = (
+				117AAA7C2479FAE600A63B34 /* Samples.ObjC */,
+				117AAA7B2479FAE600A63B34 /* Products */,
+				06936DB3260A7DC80099E314 /* Frameworks */,
+				4C2174950CA63A176451E57B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		117AAA7B2479FAE600A63B34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				117AAA7A2479FAE600A63B34 /* Samples.ObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		117AAA7C2479FAE600A63B34 /* Samples.ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				06FFBAA4261E058F003FC893 /* Extensions */,
+				06936DD5260A7F330099E314 /* API */,
+				06936DBC260A7F330099E314 /* ViewControllers */,
+				06936DD4260A7F330099E314 /* AppDelegate.h */,
+				06936DE5260A7F330099E314 /* AppDelegate.m */,
+				06936DCF260A7F330099E314 /* Assets.xcassets */,
+				06936DD3260A7F330099E314 /* Info.plist */,
+				06936DD2260A7F330099E314 /* LaunchScreen.storyboard */,
+				06936DBB260A7F320099E314 /* main.m */,
+				06936DD0260A7F330099E314 /* Main.storyboard */,
+				06936DD1260A7F330099E314 /* SceneDelegate.h */,
+				06936DE6260A7F330099E314 /* SceneDelegate.m */,
+			);
+			path = Samples.ObjC;
+			sourceTree = "<group>";
+		};
+		4C2174950CA63A176451E57B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0658D1D07E3951457E0265D /* Pods-Samples.ObjC.debug.xcconfig */,
+				C249445652090065B9E20AAE /* Pods-Samples.ObjC.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		117AAAEC247A002600A63B34 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06936DEF260A7F330099E314 /* CheckoutViewController.h in Headers */,
+				06936E01260A7F330099E314 /* AccessTokenResponse.h in Headers */,
+				06936E02260A7F330099E314 /* CreateOrderResponse.h in Headers */,
+				06936E05260A7F330099E314 /* FetchAccessTokenRequest.h in Headers */,
+				06936DF1260A7F330099E314 /* ItemCell.h in Headers */,
+				06936DF8260A7F330099E314 /* SceneDelegate.h in Headers */,
+				117AAAF1247A007800A63B34 /* PayPalAPI.h in Headers */,
+				06936DFE260A7F330099E314 /* CreateOrderEndpoint.h in Headers */,
+				06936DFD260A7F330099E314 /* FetchAccessTokenEndpoint.h in Headers */,
+				06936DF2260A7F330099E314 /* AddItemCell.h in Headers */,
+				06936E06260A7F330099E314 /* CreateOrderRequest.h in Headers */,
+				06936DE9260A7F330099E314 /* AddItemViewController.h in Headers */,
+				06936DEB260A7F330099E314 /* QuantityView.h in Headers */,
+				06936DF3260A7F330099E314 /* TotalCell.h in Headers */,
+				06936DEC260A7F330099E314 /* TextFieldCell.h in Headers */,
+				06936DFB260A7F330099E314 /* AppDelegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		117AAA792479FAE600A63B34 /* Samples.ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117AAA932479FAE700A63B34 /* Build configuration list for PBXNativeTarget "Samples.ObjC" */;
+			buildPhases = (
+				916491FC13A06BD04B1C0CB7 /* [CP] Check Pods Manifest.lock */,
+				117AAAEC247A002600A63B34 /* Headers */,
+				117AAA762479FAE600A63B34 /* Sources */,
+				117AAA772479FAE600A63B34 /* Frameworks */,
+				117AAA782479FAE600A63B34 /* Resources */,
+				062A4F3C26251B690071FEAE /* ShellScript */,
+				BCAADAD28F21D89142113577 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Samples.ObjC;
+			productName = "PayPalCheckout-Samples-iOS-Objc";
+			productReference = 117AAA7A2479FAE600A63B34 /* Samples.ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		117AAA722479FAE600A63B34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = PayPal;
+				TargetAttributes = {
+					117AAA792479FAE600A63B34 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 117AAA752479FAE600A63B34 /* Build configuration list for PBXProject "Samples.ObjC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 117AAA712479FAE600A63B34;
+			productRefGroup = 117AAA7B2479FAE600A63B34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				117AAA792479FAE600A63B34 /* Samples.ObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		117AAA782479FAE600A63B34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06936DF9260A7F330099E314 /* LaunchScreen.storyboard in Resources */,
+				06936DF6260A7F330099E314 /* Assets.xcassets in Resources */,
+				06936DF7260A7F330099E314 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		062A4F3C26251B690071FEAE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../Carthage/Build/iOS/PayPalCheckout.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -d $SRCROOT/../Pods ]; then \n  echo \"💫 Pods folder exists so skipping carthage copy...\"\nelse \n  if [ -d $SRCROOT/../Carthage ]; then \n    echo \"💫 Carthage folder exists, now copying frameworks...\"\n    /usr/local/bin/carthage copy-frameworks\n  else \n    echo \"❌ Carthage folder does not exist, did you run carthage update?\"\n  fi\nfi\n";
+		};
+		916491FC13A06BD04B1C0CB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Samples.ObjC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCAADAD28F21D89142113577 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Samples.ObjC/Pods-Samples.ObjC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Samples.ObjC/Pods-Samples.ObjC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Samples.ObjC/Pods-Samples.ObjC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		117AAA762479FAE600A63B34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06936DEE260A7F330099E314 /* CheckoutViewController.m in Sources */,
+				06936DF5260A7F330099E314 /* ItemCell.m in Sources */,
+				06936E07260A7F330099E314 /* FetchAccessTokenRequest.m in Sources */,
+				06936DFF260A7F330099E314 /* FetchAccessTokenEndpoint.m in Sources */,
+				06936DEA260A7F330099E314 /* TextFieldCell.m in Sources */,
+				06936E00260A7F330099E314 /* CreateOrderResponse.m in Sources */,
+				06936E04260A7F330099E314 /* CreateOrderRequest.m in Sources */,
+				117AAAC92479FDBA00A63B34 /* PayPalAPI.m in Sources */,
+				06936E09260A7F330099E314 /* SceneDelegate.m in Sources */,
+				06936DF0260A7F330099E314 /* TotalCell.m in Sources */,
+				06936DED260A7F330099E314 /* QuantityView.m in Sources */,
+				06936DF4260A7F330099E314 /* AddItemCell.m in Sources */,
+				06FFBAA7261E0617003FC893 /* UIViewController+Extension.m in Sources */,
+				06936E08260A7F330099E314 /* AppDelegate.m in Sources */,
+				06936E03260A7F330099E314 /* AccessTokenResponse.m in Sources */,
+				06936DE7260A7F330099E314 /* main.m in Sources */,
+				06936DFC260A7F330099E314 /* CreateOrderEndpoint.m in Sources */,
+				06936DE8260A7F330099E314 /* AddItemViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		117AAA912479FAE700A63B34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Debug;
+		};
+		117AAA922479FAE700A63B34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Release;
+		};
+		117AAA942479FAE700A63B34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0658D1D07E3951457E0265D /* Pods-Samples.ObjC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Samples.ObjC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paypal.Samples.ObjC;
+				PRODUCT_NAME = Samples.ObjC;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		117AAA952479FAE700A63B34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C249445652090065B9E20AAE /* Pods-Samples.ObjC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Samples.ObjC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paypal.Samples.ObjC;
+				PRODUCT_NAME = Samples.ObjC;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		117AAA752479FAE600A63B34 /* Build configuration list for PBXProject "Samples.ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117AAA912479FAE700A63B34 /* Debug */,
+				117AAA922479FAE700A63B34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		117AAA932479FAE700A63B34 /* Build configuration list for PBXNativeTarget "Samples.ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117AAA942479FAE700A63B34 /* Debug */,
+				117AAA952479FAE700A63B34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 117AAA722479FAE600A63B34 /* Project object */;
+}
